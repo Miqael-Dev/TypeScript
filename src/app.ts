@@ -1,18 +1,4 @@
-class Invoice {
-    client: string;
-    details: string;
-    amount: number;
-
-    constructor(c: string, d: string, a: number){
-        this.client = c;
-        this.details = d;
-        this.amount = a;
-    }
-
-    format(){
-        return `${this.client} owes ${this.amount} for ${this.details}`
-    }
-}
+import { Invoice } from "./classes/Invoice.js"
 
 const invOne = new Invoice("Michael", "build a website", 230)
 const invTwo = new Invoice("John", "build a website", 330)
@@ -20,7 +6,7 @@ const Invoices: Invoice[] = []
 
 Invoices.push(invOne)
 Invoices.push(invTwo)
-console.log(Invoices)
+console.log(invOne)
 
 
 const anchor = document.querySelector(".new-item-form") as HTMLFormElement;
